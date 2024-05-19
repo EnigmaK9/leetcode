@@ -1,0 +1,23 @@
+21. Mejor Momento para Comprar y Vender Acciones
+Fácil
+
+Se te da un array de precios donde precios[i] es el precio de una acción en el día i.
+
+Quieres maximizar tu beneficio eligiendo un solo día para comprar una acción y eligiendo un día diferente en el futuro para vender esa acción.
+
+Devuelve el máximo beneficio que puedes obtener de esta transacción. Si no puedes obtener ningún beneficio, devuelve 0.
+
+Ejemplo 1:
+Entrada: precios = [7,1,5,3,6,4]
+Salida: 5
+Explicación: Compra el día 2 (precio = 1) y vende el día 5 (precio = 6), beneficio = 6-1 = 5.
+Nota que comprar el día 2 y vender el día 1 no está permitido porque debes comprar antes de vender.
+
+Ejemplo 2:
+Entrada: precios = [7,6,4,3,1]
+Salida: 0
+Explicación: En este caso, no se realizan transacciones y el beneficio máximo = 0.
+
+Restricciones:
+1 <= precios.length <= 105
+0 <= precios[i] <= 104
