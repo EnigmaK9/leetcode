@@ -1,4 +1,4 @@
-189. Rotar Array
+189. Rotar vector
 Medio
 Temas
 Empresas
