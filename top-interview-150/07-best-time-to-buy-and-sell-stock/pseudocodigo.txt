@@ -1,0 +1,13 @@
+función maxProfit(precios):
+    min_price = infinito
+    max_profit = 0
+
+    para cada precio en precios:
+        si precio < min_price:
+            min_price = precio
+        beneficio_potencial = precio - min_price
+        si beneficio_potencial > max_profit:
+            max_profit = beneficio_potencial
+
+    devolver max_profit
+
