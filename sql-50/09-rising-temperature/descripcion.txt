@@ -1,0 +1,51 @@
+---
+
+197. Temperatura en aumento
+Esquema SQL
+Esquema Pandas
+Tabla: Clima
+
++---------------+---------+
+| Nombre Columna| Tipo    |
++---------------+---------+
+| id            | int     |
+| fechaRegistro | date    |
+| temperatura   | int     |
++---------------+---------+
+id es la columna con valores únicos para esta tabla.
+No hay filas diferentes con la misma fechaRegistro.
+Esta tabla contiene información sobre la temperatura en un cierto día.
+
+Escribe una solución para encontrar todos los Id de las fechas con temperaturas más altas en comparación con las fechas anteriores (ayer).
+
+Devuelve la tabla de resultados en cualquier orden.
+
+El formato del resultado es el siguiente ejemplo.
+
+
+
+Ejemplo 1:
+
+Entrada:
+Tabla Clima:
++----+--------------+-------------+
+| id | fechaRegistro| temperatura |
++----+--------------+-------------+
+| 1  | 2015-01-01   | 10          |
+| 2  | 2015-01-02   | 25          |
+| 3  | 2015-01-03   | 20          |
+| 4  | 2015-01-04   | 30          |
++----+--------------+-------------+
+Salida:
++----+
+| id |
++----+
+| 2  |
+| 4  |
++----+
+Explicación:
+El 2015-01-02, la temperatura fue más alta que el día anterior (10 -> 25).
+El 2015-01-04, la temperatura fue más alta que el día anterior (20 -> 30).
+
+---
+
