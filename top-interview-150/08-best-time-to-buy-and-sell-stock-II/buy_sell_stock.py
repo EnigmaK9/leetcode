@@ -1,4 +1,4 @@
-def maximumProfit(prices):
+def maximum_profit(prices):
     if not prices:
         return 0
 
@@ -10,3 +10,10 @@ def maximumProfit(prices):
 
     return total_profit
 
+prices1 = [7, 1, 5, 3, 6, 4]
+prices2 = [1, 2, 3, 4, 5]
+prices3 = [7, 6, 4, 3, 1]
+
+print(maximum_profit(prices1))
+print(maximum_profit(prices2))
+print(maximum_profit(prices3))
