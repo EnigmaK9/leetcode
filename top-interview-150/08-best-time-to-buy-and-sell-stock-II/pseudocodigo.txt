@@ -1,0 +1,12 @@
+funcion maximaGanancia(precios):
+    si precios esta vacio:
+        retorna 0
+
+    ganancia_maxima = 0
+
+    para indice desde 1 hasta longitud(precios) - 1:
+        si precios[indice] > precios[indice - 1]:
+            ganancia_maxima += precios[indice] - precios[indice - 1]
+
+    retorna ganancia_maxima
+

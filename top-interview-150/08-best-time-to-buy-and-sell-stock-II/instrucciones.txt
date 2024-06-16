@@ -1,0 +1,46 @@
+### Problema 122. Mejor momento para comprar y vender acciones II
+
+#### Descripción
+
+Se te da un arreglo de enteros `prices` donde `prices[i]` es el precio de una acción en el día `i`.
+
+Cada día, puedes decidir comprar y/o vender la acción. Solo puedes mantener como máximo una acción a la vez. Sin embargo, puedes comprarla y luego venderla inmediatamente el mismo día.
+
+Encuentra y devuelve la máxima ganancia que puedes lograr.
+
+---
+
+#### Ejemplo 1:
+
+**Entrada:** `prices = [7,1,5,3,6,4]`
+
+**Salida:** `7`
+
+**Explicación:** Compra el día 2 (precio = 1) y vende el día 3 (precio = 5), ganancia = 5-1 = 4. Luego compra el día 4 (precio = 3) y vende el día 5 (precio = 6), ganancia = 6-3 = 3. Ganancia total es 4 + 3 = 7.
+
+---
+
+#### Ejemplo 2:
+
+**Entrada:** `prices = [1,2,3,4,5]`
+
+**Salida:** `4`
+
+**Explicación:** Compra el día 1 (precio = 1) y vende el día 5 (precio = 5), ganancia = 5-1 = 4. Ganancia total es 4.
+
+---
+
+#### Ejemplo 3:
+
+**Entrada:** `prices = [7,6,4,3,1]`
+
+**Salida:** `0`
+
+**Explicación:** No hay forma de obtener una ganancia positiva, así que nunca compramos la acción para lograr la ganancia máxima de 0.
+
+---
+
+#### Restricciones:
+
+- `1 <= prices.length <= 3 * 10^4`
+- `0 <= prices[i] <= 10^4`
