@@ -1,26 +1,43 @@
+"""
+Este código define una clase llamada Solution con un método llamado removeDuplicates.
+El método removeDuplicates elimina los duplicados en una lista ordenada de números
+de tal manera que cada elemento aparezca como máximo dos veces. La lista se modifica
+in situ y el método devuelve la nueva longitud de la lista.
+
+La solución utiliza dos punteros: uno lento (slow) y uno rápido (fast). La idea es
+recorrer la lista con el puntero rápido y usar el puntero lento para reescribir
+la lista sin los elementos duplicados adicionales.
+"""
+
 class Solution:
     def removeDuplicates(self, nums):
-        # If the length of the list is less than 2, no duplicates can exist
+        # Comprobar si la lista tiene menos de 2 elementos
+        # Si es así, simplemente devolver la longitud de la lista
         if len(nums) < 2:
             return len(nums)
 
-        # Initialize two pointers, both starting at index 2
+        # Inicializar los punteros lento (slow) y rápido (fast)
+        # Ambos comenzando en el índice 2 porque permitimos hasta dos duplicados
         slow, fast = 2, 2
 
-        # Iterate through the array with the fast pointer
+        # Iterar sobre la lista usando el puntero rápido
         while fast < len(nums):
-            # If the current number is not equal to the number 2 positions before the slow pointer
+            # Verificar si el número en la posición fast es diferente
+            # del número en la posición slow - 2
             if nums[slow - 2] != nums[fast]:
-                # Move the slow pointer and update the number at the slow pointer
+                # Si es diferente, actualizar la posición del puntero lento
+                # con el valor del puntero rápido
                 nums[slow] = nums[fast]
+                # Mover el puntero lento hacia adelante
                 slow += 1
-            # Always move the fast pointer
+            # Mover siempre el puntero rápido hacia adelante
             fast += 1
 
-        # The slow pointer index is also the new length of the array without duplicates
+        # La posición del puntero lento representa la nueva longitud de la lista
         return slow
 
-# Example usage
+# Ejemplo de uso del método removeDuplicates
 sol = Solution()
-print(sol.removeDuplicates([1,1,1,2,2,3]))  # Output: 5 ([1, 1, 2, 2, 3])
+# Llamar al método con una lista de números con duplicados
+print(sol.removeDuplicates([1,1,1,2,2,3]))  # Debería imprimir 5, lista modificada: [1, 1, 2, 2, 3]
 

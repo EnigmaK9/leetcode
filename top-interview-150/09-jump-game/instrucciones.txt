@@ -1,0 +1,22 @@
+# Juego de Saltos
+
+Se te da un arreglo de enteros llamado `nums`. Inicialmente estás posicionado en el primer índice del arreglo, y cada elemento en el arreglo representa la longitud máxima de salto en esa posición.
+
+Devuelve `true` si puedes llegar al último índice, o `false` en caso contrario.
+
+### Ejemplo 1:
+
+- **Entrada:** `nums = [2,3,1,1,4]`
+- **Salida:** `true`
+- **Explicación:** Salta 1 paso desde el índice 0 al 1, luego 3 pasos hasta el último índice.
+
+### Ejemplo 2:
+
+- **Entrada:** `nums = [3,2,1,0,4]`
+- **Salida:** `false`
+- **Explicación:** Siempre llegarás al índice 3 sin importar lo que hagas. Su longitud máxima de salto es 0, lo que hace imposible llegar al último índice.
+
+### Restricciones:
+
+- `1 <= nums.length <= 10^4`
+- `0 <= nums[i] <= 10^5`
