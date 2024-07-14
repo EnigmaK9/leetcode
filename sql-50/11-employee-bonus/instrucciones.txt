@@ -1,0 +1,48 @@
+577. Bonificación de Empleados
+
+Tabla: Empleado
+
+Nombre de Columna	Tipo
+empId	int
+nombre	varchar
+supervisor	int
+salario	int
+empId es la columna con valores únicos para esta tabla.
+Cada fila de esta tabla indica el nombre y el ID de un empleado, además de su salario y el id de su supervisor.
+
+Tabla: Bonificación
+
+Nombre de Columna	Tipo
+empId	int
+bonificación	int
+empId es la columna de valores únicos para esta tabla.
+empId es una clave externa (columna de referencia) hacia empId de la tabla Empleado.
+Cada fila de esta tabla contiene el id de un empleado y su respectiva bonificación.
+
+Escribe una solución para reportar el nombre y la cantidad de bonificación de cada empleado con una bonificación menor a 1000.
+
+Devuelve la tabla de resultados en cualquier orden.
+
+El formato de resultado es el siguiente ejemplo.
+
+Ejemplo 1:
+Entrada:
+
+Tabla Empleado:
+
+empId	nombre	supervisor	salario
+3	Brad	null	4000
+1	John	3	1000
+2	Dan	3	2000
+4	Thomas	3	4000
+Tabla Bonificación:
+
+empId	bonificación
+2	500
+4	2000
+Salida:
+
+nombre	bonificación
+Brad	null
+John	null
+Dan	500
