@@ -1,0 +1,56 @@
+% creation date: may 11, 2026
+% last modified: may 11, 2026
+% description: latex source for linked list cycle detection summary
+% author: enigmak9
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\geometry{margin=1in}
+
+\begin{document}
+
+\title{Linked List Cycle Detection Summary}
+\author{}
+\date{May 11, 2026}
+\maketitle
+
+\section*{Overview}
+% summary of cycle detection logic
+This document outlines the techniques used to identify cycles within a linked list, specifically comparing the hash set method with the more space efficient tortoise and hare algorithm.
+
+\section*{1. Hash Set Approach}
+% explanation of the visit tracking method
+The most straightforward method for cycle detection is to track every node visited during traversal.
+\begin{itemize}
+    \item \textbf{Mechanism}: Use a hash set to store node references.
+    \item \textbf{Detection}: If a node being visited is already present in the set, a cycle is confirmed.
+    \item \textbf{Time Complexity}: $O(n)$
+    \item \textbf{Space Complexity}: $O(n)$
+\end{itemize}
+
+\section*{2. Floyd's Tortoise and Hare Algorithm}
+% explanation of the two pointer technique
+This algorithm optimizes space by using two pointers that move at different speeds.
+\begin{itemize}
+    \item \textbf{Slow Pointer}: Moves 1 step at a time.
+    \item \textbf{Fast Pointer}: Moves 2 steps at a time.
+\end{itemize}
+If the fast pointer reaches the end of the list (null), there is no cycle. If it eventually meets the slow pointer at the same node, a cycle exists.
+
+\section*{Mathematical Convergence}
+% proof of linear time complexity
+The convergence of the pointers is guaranteed by the decreasing gap between them. Let $G$ be the initial integer distance between the pointers within a cycle. In each iteration:
+\begin{enumerate}
+    \item The slow pointer moves forward by 1 unit.
+    \item The fast pointer moves forward by 2 units.
+\end{enumerate}
+
+The resulting gap for the next iteration is:
+\[ G_{new} = G + 1 - 2 = G - 1 \]
+
+Since the gap decreases by exactly 1 in each step, it will reach 0 in at most $n$ steps, where $n$ is the cycle length. This ensures the algorithm runs in linear time $O(n)$ with constant space $O(1)$.
+
+\end{document}
