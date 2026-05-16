@@ -1,0 +1,10 @@
+# binary search
+10 lines at most
+be able to implement it quickly
+binary search is trivial to me
+
+# dfs
+# bfs
+sliding
+be really good at core algorithms
+
