@@ -1,4 +1,4 @@
-i# Creation Date: 2026-05-17
+ Creation Date: 2026-05-17
 # Last Modified: 2026-05-17
 # Description: calculate maximum profit from buying and selling a stock using two pointers
 # Author: enigmak9
