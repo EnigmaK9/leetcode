@@ -1,0 +1,18 @@
+Tenemos dos caracteres especiales:
+
+* El primer carácter se puede representar con un solo bit `0`.
+* El segundo carácter se puede representar con dos bits (`10` u `11`).
+
+Dado un arreglo binario `bits` que termina en `0`, devuelve `true` si el último carácter debe ser obligatoriamente un carácter de un solo bit.
+
+**Ejemplo 1:**
+
+* **Entrada:** `bits = [1, 0, 0]`
+* **Salida:** `true`
+* **Explicación:** La única forma de decodificarlo es como un carácter de dos bits (`10`) seguido de un carácter de un solo bit (`0`). Por lo tanto, el último carácter es de un solo bit.
+
+**Ejemplo 2:**
+
+* **Entrada:** `bits = [1, 1, 1, 0]`
+* **Salida:** `false`
+* **Explicación:** La única forma de decodificarlo es como un carácter de dos bits (`11`) seguido de otro carácter de dos bits (`10`). Por lo tanto, el último carácter no es de un solo bit.
